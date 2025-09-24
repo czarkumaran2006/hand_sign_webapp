@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hand Sign - Live</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Hand Sign Recognition (web)</h1>
+
+  <video id="video" autoplay playsinline></video>
+  <canvas id="canvas" style="display:none;"></canvas>
+
+  <div id="status">
+    <p id="letter">Current letter: </p>
+    <p id="word">Word: </p>
+  </div>
+
+  <div>
+    <button id="clearBtn">Clear Word</button>
+    <label>
+      Auto speak:
+      <input id="autoSpeak" type="checkbox" checked>
+    </label>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
